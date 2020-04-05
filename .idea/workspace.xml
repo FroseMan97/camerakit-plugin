@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f391f453-52e1-4f7c-8b3a-4d442fd8ade0" name="Default Changelist" comment="" />
+    <list default="true" id="f391f453-52e1-4f7c-8b3a-4d442fd8ade0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/.pub/" />
@@ -23,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/camera_kit.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="61" column="57" selection-start-line="61" selection-start-column="57" selection-end-line="61" selection-end-column="57" />
+            <state relative-caret-position="294">
+              <caret line="68" column="17" lean-forward="true" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -32,20 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/android/src/main/kotlin/comfroseman97/github/camera_kit/CameraKitPlugin.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="210">
               <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/example/android/app/src/main/kotlin/comfroseman97/github/camera_kit_example/MainActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -64,6 +57,9 @@
       <find>over</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -80,94 +76,73 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1428" />
-    <option name="height" value="977" />
-  </component>
+  <component name="ProjectId" id="1a8KlZJlm0WXVv3G3X23Ie8Ov4A" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="PackagesPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane">
         <subPane>
           <expand>
             <path>
-              <item name="camera_kit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="camera_kit" type="462c0819:PsiDirectoryNode" />
+              <item name="camerakit-plugin" type="58d84e3e:PackageViewProjectNode" />
+              <item name="camera_kit" type="616d4139:PackageViewModuleNode" />
             </path>
             <path>
-              <item name="camera_kit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="camera_kit" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="camerakit-plugin" type="58d84e3e:PackageViewProjectNode" />
+              <item name="camera_kit" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
             </path>
             <path>
-              <item name="camera_kit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="camera_kit" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="camerakit-plugin" type="58d84e3e:PackageViewProjectNode" />
+              <item name="camera_kit" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+              <item name="android" type="1f31426a:PackageElementNode" />
             </path>
             <path>
-              <item name="camera_kit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="camera_kit" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="camerakit-plugin" type="58d84e3e:PackageViewProjectNode" />
+              <item name="camera_kit" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+              <item name="android" type="1f31426a:PackageElementNode" />
+              <item name="src" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="camerakit-plugin" type="58d84e3e:PackageViewProjectNode" />
+              <item name="camera_kit" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+              <item name="android" type="1f31426a:PackageElementNode" />
+              <item name="src" type="1f31426a:PackageElementNode" />
+              <item name="main" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="camerakit-plugin" type="58d84e3e:PackageViewProjectNode" />
+              <item name="camera_kit" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+              <item name="android" type="1f31426a:PackageElementNode" />
+              <item name="src" type="1f31426a:PackageElementNode" />
+              <item name="main" type="1f31426a:PackageElementNode" />
+              <item name="java.io.flutter" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="camerakit-plugin" type="58d84e3e:PackageViewProjectNode" />
+              <item name="camera_kit" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+              <item name="android" type="1f31426a:PackageElementNode" />
+              <item name="src" type="1f31426a:PackageElementNode" />
+              <item name="main" type="1f31426a:PackageElementNode" />
+              <item name="kotlin.comfroseman97.github.camera_kit" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="camera_kit" type="1abcf292:AndroidViewProjectNode" />
-              <item name="camera_kit" type="e9137016:NonAndroidModuleNode" />
-            </path>
-            <path>
-              <item name="camera_kit" type="1abcf292:AndroidViewProjectNode" />
-              <item name="camera_kit" type="e9137016:NonAndroidModuleNode" />
-              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="camera_kit" type="1abcf292:AndroidViewProjectNode" />
-              <item name="camera_kit_android" type="e9137016:NonAndroidModuleNode" />
-            </path>
-            <path>
-              <item name="camera_kit" type="1abcf292:AndroidViewProjectNode" />
-              <item name="camera_kit_android" type="e9137016:NonAndroidModuleNode" />
-              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="camera_kit" type="1abcf292:AndroidViewProjectNode" />
-              <item name="camera_kit_android" type="e9137016:NonAndroidModuleNode" />
-              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
-              <item name="camera_kit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="camera_kit" type="1abcf292:AndroidViewProjectNode" />
-              <item name="camera_kit_example_android" type="e9137016:NonAndroidModuleNode" />
-            </path>
-            <path>
-              <item name="camera_kit" type="1abcf292:AndroidViewProjectNode" />
-              <item name="camera_kit_example_android" type="e9137016:NonAndroidModuleNode" />
-              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="camera_kit" type="1abcf292:AndroidViewProjectNode" />
-              <item name="camera_kit_example_android" type="e9137016:NonAndroidModuleNode" />
-              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
-              <item name="camera_kit_example" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -199,9 +174,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1428" height="977" extended-state="0" />
+    <frame x="0" y="23" width="2560" height="977" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21717171" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12271644" />
       <window_info id="Captures" order="1" side_tool="true" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -241,9 +216,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example/camera_kit_example.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/example/camera_kit_example.iml" />
     <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -273,10 +246,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android/src/main/kotlin/comfroseman97/github/camera_kit/CameraKitPluginView.kt" />
+    <entry file="file://$PROJECT_DIR$/example/android/app/src/main/kotlin/comfroseman97/github/camera_kit_example/MainActivity.kt" />
     <entry file="file://$PROJECT_DIR$/lib/camera_kit.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="61" column="57" selection-start-line="61" selection-start-column="57" selection-end-line="61" selection-end-column="57" />
+        <state relative-caret-position="294">
+          <caret line="68" column="17" lean-forward="true" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -285,15 +259,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/android/src/main/kotlin/comfroseman97/github/camera_kit/CameraKitPlugin.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="210">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/android/app/src/main/kotlin/comfroseman97/github/camera_kit_example/MainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
         </state>
       </provider>
     </entry>

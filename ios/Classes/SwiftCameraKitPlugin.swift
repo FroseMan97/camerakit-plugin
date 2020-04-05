@@ -20,11 +20,12 @@ public class CameraKitView: NSObject, FlutterPlatformView {
 
     public required init(_ frame: CGRect, viewId: Int64, args: Any?, with registrar: FlutterPluginRegistrar) {
         self.captureSession = CKFPhotoSession()
-        self.captureSession.resolution = CGSize(width: 3024, height: 4032)
-        self.captureSession.flashMode = .on
+        self.captureSession.resolution = CGSize(width: 1080, height: 1920)
+        self.captureSession.flashMode = .auto
         self._channel = FlutterMethodChannel(name: "camera_kit_\(viewId)", binaryMessenger: registrar.messenger())
         self.previewView = CKFPreviewView(frame: frame)
         self.previewView.session = captureSession
+        self.previewView.autorotate = true
         
         self.previewView.previewLayer?.videoGravity = .resizeAspectFill
     
@@ -45,13 +46,17 @@ public class CameraKitView: NSObject, FlutterPlatformView {
                     result(FlutterError(code: "CaptureError", message: "Error when capture image", details: nil))
                 }
             }
-            if call.method == "dispose" {
+            if call.method == "togle" {
+                if let session = self.previewView.session as? CKFPhotoSession {
+                    if session.cameraPosition == .front {
+                        session.cameraPosition = .back
+                    } else {
+                        session.cameraPosition = .front
+                    }
+                }
                 result(nil)
             }
-            if call.method == "start" {
-                self.previewView.session?.start()
-                result(nil)
-            }
+           
         }
     }
     deinit {
@@ -68,29 +73,10 @@ public class CameraKitViewFactory : NSObject, FlutterPlatformViewFactory {
     }
 
     public func create(withFrame frame: CGRect, viewIdentifier viewId: Int64, arguments args: Any?) -> FlutterPlatformView {
-        //return NativeView(frame, viewId: viewId, args: args)
         return CameraKitView(frame, viewId: viewId, args: args, with: _registrar)
     }
 
     public func createArgsCodec() -> FlutterMessageCodec & NSObjectProtocol {
         return FlutterStandardMessageCodec.sharedInstance()
     }
-}
-
-public class NativeView : NSObject, FlutterPlatformView {
-    
-    let frame : CGRect
-    let viewId : Int64
-    
-    init(_ frame:CGRect, viewId:Int64, args: Any?){
-        self.frame = frame
-        self.viewId = viewId
-    }
-    
-    public func view() -> UIView {
-        let view : UIView = UIView(frame: self.frame)
-        view.backgroundColor = UIColor.lightGray
-        return view
-    }
-    
 }

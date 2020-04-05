@@ -24,7 +24,7 @@ class CameraKitPlugin(): FlutterPlugin, ActivityAware {
                  "camera_kit", 
                     CameraPluginFactory(
                         pluginBinding?.getBinaryMessenger(),
-                        binding.activity.application,
+                        binding.activity,
                         lifecycle,
                         null
                     ))
@@ -39,7 +39,7 @@ class CameraKitPlugin(): FlutterPlugin, ActivityAware {
                         "camera_kit",
                         CameraPluginFactory(
                                 pluginBinding?.getBinaryMessenger(),
-                                binding.activity.application,
+                                binding.activity,
                                 lifecycle,
                                 null
                         ))

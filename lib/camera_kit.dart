@@ -25,6 +25,14 @@ print(error);
     await _channel.invokeMethod('dispose');
   }
 
+  Future flashOn() async {
+    await _channel.invokeMethod("flashOn");
+  }
+
+  Future flashOff() async {
+    await _channel.invokeMethod("flashOff");
+  }
+
   Future togle() async {
     await _channel.invokeMethod('togle');
   }
@@ -51,6 +59,14 @@ class CameraKitPreview extends StatefulWidget {
 
 class _CameraKitPreviewState extends State<CameraKitPreview>{
   final GlobalKey key = GlobalKey();
+
+  @override
+  void initState() { 
+    super.initState();
+    Future.delayed(Duration(seconds: 5)).then((value) {
+      print("SIZED _>>>>>>>>>>> ${key.currentContext.size}");
+    });
+  }
   @override
   Widget build(BuildContext context) {
     if(defaultTargetPlatform == TargetPlatform.android){

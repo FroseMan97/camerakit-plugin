@@ -1,5 +1,6 @@
 package comfroseman97.github.camera_kit
 
+import android.app.Activity
 import android.app.Application
 import android.content.Context
 import androidx.lifecycle.Lifecycle
@@ -13,12 +14,12 @@ import java.util.concurrent.atomic.AtomicInteger
 
 class CameraPluginFactory internal constructor(
         private val binaryMessenger: BinaryMessenger?,
-        private val application: Application?,
+        private val activity: Activity?,
         private val lifecycle: Lifecycle?,
         private val registrar: PluginRegistry.Registrar? // V1 embedding only.
 ) : PlatformViewFactory(StandardMessageCodec.INSTANCE) {
 
     override fun create(context: Context, id: Int, args: Any?): PlatformView {
-        return CameraKitController(id, context, binaryMessenger, application, lifecycle, registrar)
+        return CameraKitController(id, context, binaryMessenger, activity, lifecycle, registrar)
     }
 }
