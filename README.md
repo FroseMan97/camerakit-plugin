@@ -2,10 +2,15 @@
 
 Camera Plugin (PlatformView)
 
+Плагин камеры Flutter для iOS (CameraKit) и Android (CameraX)
+
+Пока еще в разработке, вообще в принципе опробации
+
 ## Getting Started
 
-Плагин камеры Flutter для iOS (CameraKit) и Android (CameraX)
-Пока еще в разработке, вообще в принципе опробации
+Demo in [apk-demo (click)](https://github.com/FroseMan97/camerakit-plugin/tree/master/apk-demo) folder.
+
+Before starting, give access to the ```CAMERA``` and ```STORAGE```
 
  <img src="screens/1.JPG" width="285" height="570"> <img src="screens/2.PNG" width="285" height="570"> <img src="screens/3.PNG" width="285" height="570">
 
