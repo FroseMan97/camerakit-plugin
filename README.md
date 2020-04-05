@@ -8,7 +8,7 @@ Camera Plugin (PlatformView)
 
 ## Getting Started
 
-Demo in [apk-demo (click)](https://https://github.com/FroseMan97/camerakit-plugin/tree/master/apk-demo) folder.
+Demo in [apk-demo (click)](https://github.com/FroseMan97/camerakit-plugin/tree/master/apk-demo) folder.
 
 Before starting, give access to the ```CAMERA``` and ```STORAGE```
 
