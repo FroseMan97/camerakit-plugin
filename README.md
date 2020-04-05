@@ -1,14 +1,15 @@
 # camera_kit
 
-Camera Kit Plugin
+Camera Plugin (PlatformView)
 
 ## Getting Started
+
+Плагин камеры Flutter для iOS (CameraKit) и Android (CameraX)
+Пока еще в разработке, вообще в принципе опробации
+
+ <img src="screens/1.JPG" width="285" height="570"> <img src="screens/2.PNG" width="285" height="570"> <img src="screens/3.PNG" width="285" height="570">
 
 This project is a starting point for a Flutter
 [plug-in package](https://flutter.dev/developing-packages/),
 a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+Android and iOS.
