@@ -1,11 +1,15 @@
 import 'dart:io';
 import 'dart:math';
 
+import 'package:camera_kit_example/detail_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:camera_kit/camera_kit.dart';
+import 'package:photo_view/photo_view.dart';
+import 'package:photo_view/photo_view_gallery.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -42,26 +46,38 @@ class CameraScreen extends StatefulWidget {
 class _CameraScreenState extends State<CameraScreen> {
   CameraKit cameraKit;
   String pathToFile = '';
+  List<String> photos = [];
 
-  Future<String> takePicture() async {
+  Future takePicture() async {
     final Directory extDir = await getApplicationDocumentsDirectory();
     final String dirPath = '${extDir.path}/Pictures/cme';
     await Directory(dirPath).create(recursive: true);
     final String filePath =
         '$dirPath/${DateTime.now().millisecondsSinceEpoch}.jpg';
-    final message = await cameraKit.captureImage(filePath);
-    print('CAMERA ------- $message');
-    return filePath;
+    try {
+      HapticFeedback.mediumImpact();
+      await cameraKit.captureImage(filePath);
+      photos.add(filePath);
+      HapticFeedback.vibrate();
+      setState(() {
+        pathToFile = filePath;
+      });
+    } catch (e) {
+      print(e);
+    }
   }
 
   var key = GlobalKey();
   @override
   Widget build(BuildContext context) {
     final bo = pathToFile != null && pathToFile.isNotEmpty;
-    final camera = CameraKitPreview(
-      (CameraKit con) {
-        cameraKit = con;
-      },
+    final camera = Container(
+      color: Colors.black,
+      child: CameraKitPreview(
+        (CameraKit con) {
+          cameraKit = con;
+        },
+      ),
     );
 
     return Container(
@@ -91,21 +107,14 @@ class _CameraScreenState extends State<CameraScreen> {
                       color: Colors.black,
                       child: GestureDetector(
                         onTap: () async {
-                          HapticFeedback.mediumImpact();
-                          final path = await takePicture();
-                          HapticFeedback.mediumImpact();
-                          HapticFeedback.vibrate();
-
-                          setState(() {
-                            pathToFile = path;
-                          });
+                          await takePicture();
                         },
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 32),
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 16.0, horizontal: 32),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-                              
                               SizedBox(
                                 height: 56,
                                 width: 56,
@@ -113,7 +122,12 @@ class _CameraScreenState extends State<CameraScreen> {
                                   onTap: () async {
                                     cameraKit.togle();
                                   },
-                                  child: Icon(Icons.switch_camera, size: 36,color: Colors.white,),),
+                                  child: Icon(
+                                    Icons.switch_camera,
+                                    size: 36,
+                                    color: Colors.white,
+                                  ),
+                                ),
                               ),
                               CircleAvatar(
                                 foregroundColor: Colors.transparent,
@@ -136,26 +150,12 @@ class _CameraScreenState extends State<CameraScreen> {
                                 child: Visibility(
                                   visible: bo,
                                   child: InkWell(
-                                    onTap: () => Navigator.of(context)
-                                        .push(MaterialPageRoute(
-                                            builder: (context) => Scaffold(
-                                                  extendBodyBehindAppBar: true,
-                                                  appBar: AppBar(
-                                                    backgroundColor:
-                                                        Colors.transparent,
-                                                  ),
-                                                  backgroundColor: Colors.black,
-                                                  body: Center(
-                                                      child: Hero(
-                                                    tag: 'picture',
-                                                    child: Image.file(
-                                                      File(pathToFile),
-                                                      fit: BoxFit.cover,
-                                                    ),
-                                                  )),
-                                                ))),
+                                    onTap: () => Navigator.of(context).push(
+                                      CupertinoPageRoute(
+                                        builder: (context) => DetailPage(photos),
+                                      ),
+                                    ),
                                     child: Hero(
-                                      transitionOnUserGestures: true,
                                       tag: 'picture',
                                       child: Image.file(
                                         File(pathToFile),
