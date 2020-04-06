@@ -6,6 +6,11 @@ Camera Plugin (PlatformView)
 
 Пока еще в разработке, вообще в принципе опробации
 
+- Zoom
+- AutoFocus
+- AutoExposure
+- Flash (auto)
+
 ## Getting Started
 
 Demo in [apk-demo (click)](https://github.com/FroseMan97/camerakit-plugin/tree/master/apk-demo) folder.
