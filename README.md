@@ -2,6 +2,8 @@
 
 Camera Plugin (PlatformView)
 
+Здесь больше не поддерживается, ушел в коммерцию)
+
 Плагин камеры Flutter для iOS (CameraKit) и Android (CameraX)
 
 Пока еще в разработке, вообще в принципе опробации
